@@ -1,6 +1,5 @@
 FROM node:8.9.4-alpine
 MAINTAINER 178073575@qq.com
-ENV TZ = Asia/Shanghai
 
 #将代码移动到容器中的 /ndoe 路径下
 COPY . /node
@@ -9,10 +8,7 @@ COPY . /node
 WORKDIR /node
 
 #安装PM2
-RUN npm install pm2 -g
-
-#指定时区
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN npm install
 
 #暴露容器的3000端口
 EXPOSE 3000
