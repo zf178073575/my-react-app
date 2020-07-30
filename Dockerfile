@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:8.9.4-alpine
 MAINTAINER 178073575@qq.com
 ENV TZ = Asia/Shanghai
 
